@@ -23,6 +23,6 @@ Scenario: Complete registiration EnrollmentInquiryForm succesfully
 	And verify the warnin sentence is disabled "Please carefully review the form you have entered."
 	And verify all parent's informations
 	And verify all student's informations
-	When User click the next button
+	When User click the Finish button
 	Then User should see Confirmation Number 
 	

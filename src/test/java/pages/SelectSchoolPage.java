@@ -27,6 +27,9 @@ public class SelectSchoolPage {
 	@FindBy(id = "tableSchools_1")
 	public WebElement schoolTable;
 	
+	@FindBy(id = "school_1_2")
+	public WebElement firstSchoolName;
+	
 	public int studentAge() {
 		String stAgeInfo = Driver.getDriver().findElement(By.id("studentageinfo1")).getText();
 		int stAge = Integer.parseInt(stAgeInfo.split(" ")[0]);

@@ -135,8 +135,7 @@ formatter.match({
   "location": "EnrollmentInquiryFormStepDefs.user_should_see_sutudents_name_on_page()"
 });
 formatter.result({
-  "error_message": "org.junit.ComparisonFailure: Wrong student name is displayed expected:\u003c[]\u003e but was:\u003c[Josh Beatty]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat stepDefinitions.EnrollmentInquiryFormStepDefs.user_should_see_sutudents_name_on_page(EnrollmentInquiryFormStepDefs.java:94)\r\n\tat ✽.User should see sutudents\u0027 name on page(src/test/resources/features/EnrollmentInquiryForm.feature:15)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "User should see Academic year",
@@ -146,7 +145,7 @@ formatter.match({
   "location": "EnrollmentInquiryFormStepDefs.user_should_see_Academic_year()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User should see grade level",
@@ -156,7 +155,7 @@ formatter.match({
   "location": "EnrollmentInquiryFormStepDefs.user_should_see_grade_level()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User should see students\u0027 age",
@@ -166,7 +165,7 @@ formatter.match({
   "location": "EnrollmentInquiryFormStepDefs.user_should_see_students_age()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User should see available schools",
@@ -176,7 +175,7 @@ formatter.match({
   "location": "EnrollmentInquiryFormStepDefs.user_should_see_available_schools()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User select one of the school from available schools list",
@@ -186,7 +185,7 @@ formatter.match({
   "location": "EnrollmentInquiryFormStepDefs.user_select_one_of_the_school_from_available_schools_list()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User click the next button",
@@ -196,7 +195,7 @@ formatter.match({
   "location": "EnrollmentInquiryFormStepDefs.user_click_the_next_button()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User should see \"Finish\" page",
@@ -206,7 +205,7 @@ formatter.match({
   "location": "EnrollmentInquiryFormStepDefs.user_should_see_page(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "verify the warnin sentence is disabled \"Please carefully review the form you have entered.\"",
@@ -216,7 +215,7 @@ formatter.match({
   "location": "EnrollmentInquiryFormStepDefs.verify_the_warnin_sentence_is_disabled(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "verify all parent\u0027s informations",
@@ -226,7 +225,7 @@ formatter.match({
   "location": "EnrollmentInquiryFormStepDefs.verify_all_parent_s_informations()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "verify all student\u0027s informations",
@@ -236,17 +235,17 @@ formatter.match({
   "location": "EnrollmentInquiryFormStepDefs.verify_all_student_s_informations()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "User click the next button",
+  "name": "User click the Finish button",
   "keyword": "When "
 });
 formatter.match({
-  "location": "EnrollmentInquiryFormStepDefs.user_click_the_next_button()"
+  "location": "EnrollmentInquiryFormStepDefs.user_click_the_Finish_button()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User should see Confirmation Number",
@@ -256,9 +255,8 @@ formatter.match({
   "location": "EnrollmentInquiryFormStepDefs.user_should_see_Confirmation_Number()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png");
 formatter.after({
   "status": "passed"
 });

@@ -17,10 +17,11 @@ public class UserStudent {
 	Random rd = new Random();
 	static Date dateOfBirth1 = faker.date().birthday(6, 16);
 
-	public String sfirstName = faker.name().firstName();
-	public String slastName = faker.name().lastName();
-	public Date dateOfBirth = faker.date().birthday(5, 16);
-	public String birthDay = dateOfBirth + "";
+	public static String sfirstName = faker.name().firstName();
+	public static String slastName = faker.name().lastName();
+	public static Date dateOfBirth = faker.date().birthday(5, 16);
+	public static String birthDay = dateOfBirth + "";
+	public static String currentAcYear;
 
 	// public static void main(String[] args) {
 	// Faker faker = new Faker();
@@ -29,9 +30,10 @@ public class UserStudent {
 	//
 	//
 	// }
+	public static String birthDay1;
 	public static String dateOfBirth() {
 
-		String birthDay1 = dateOfBirth1 + "";
+		birthDay1 = dateOfBirth1 + "";
 		birthDay1 = "7/" + birthDay1.split(" ")[2] + "/" + birthDay1.split(" ")[5];
 		return birthDay1;
 	}
