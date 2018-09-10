@@ -178,6 +178,7 @@ public class EnrollmentInquiryFormStepDefs {
 		assertTrue(pip.pstreet.getText().isEmpty());
 		assertTrue(pip.pcity.getText().isEmpty());
 	//	assertTrue(pip.pstate.getText().isEmpty());
+		
 		assertTrue(pip.pzipcode.getText().isEmpty());
 		selectByIndex(pip.pHowDidYouHearUs, 1);
 		

@@ -28,7 +28,10 @@ public class SelectSchoolPage {
 	public WebElement schoolTable;
 	
 	@FindBy(id = "school_1_2")
-	public WebElement firstSchoolName;
+	public WebElement firstSchoolNameRadioButton;
+
+	@FindBy(id = "school_1_4")
+	public WebElement secondSchoolNameRadioButton;
 	
 	public int studentAge() {
 		String stAgeInfo = Driver.getDriver().findElement(By.id("studentageinfo1")).getText();

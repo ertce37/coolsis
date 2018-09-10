@@ -17,7 +17,7 @@ import cucumber.api.junit.Cucumber;
 		tags="@temp",
 		features= "src/test/resources/features/", 
 		glue= "stepDefinitions" 
-		//,dryRun = true
+		,dryRun = true
 		)
 
 
