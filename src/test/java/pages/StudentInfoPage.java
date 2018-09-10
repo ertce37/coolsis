@@ -24,7 +24,7 @@ public class StudentInfoPage {
 	
 	@FindBy(id = "gender_1")
 	public WebElement sGender;
-	
+				
 	@FindBy(id = "spn_acadYear_1_1")
 	public WebElement acYear;
 	

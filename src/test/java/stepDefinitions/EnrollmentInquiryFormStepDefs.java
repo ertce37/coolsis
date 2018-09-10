@@ -23,7 +23,7 @@ import utilities.ConfigurationReader;
 import utilities.Driver;
 
 public class EnrollmentInquiryFormStepDefs {
-	EnrollmentInquiryFormPage EFP = new EnrollmentInquiryFormPage();
+	EnrollmentInquiryFormPage efp = new EnrollmentInquiryFormPage();
 	ParentInfoPage pip = new ParentInfoPage();
 	StudentInfoPage sip = new StudentInfoPage();
 	Faker faker = new Faker();
@@ -37,23 +37,23 @@ public class EnrollmentInquiryFormStepDefs {
 	@Given("User get EnrollmentInquiryForm page")
 	public void user_get_EnrollmentInquiryForm_page() {
 		Driver.getDriver().get(ConfigurationReader.getProperty("URLEnrollmentInquiryForm"));
+		waitFor(5);
 	}
 
 	@When("User accept admission procesure")
 	public void user_accept_admission_procesure() {
-		waitFor(5);
-		EFP.acceptTermRadioButton.click();
+		efp.acceptTermRadioButton.click();
 	}
 
 	@When("User click the next button")
 	public void user_click_the_next_button() {
-		EFP.nextButton.click();
+		efp.nextButton.click();
 		waitFor(2);
 	}
 
 	@Then("User should see {string} page")
 	public void user_should_see_page(String page) {
-		assertTrue(EFP.pageVerify(page).isEnabled());
+		assertTrue(efp.pageVerify(page).isEnabled());
 	}
 
 	@When("User fill all parent information form")
@@ -162,6 +162,55 @@ public class EnrollmentInquiryFormStepDefs {
 		assertTrue(fp.confirmationNumber.isDisplayed());
 		System.out.println("Student "+ us.sfirstName + "'s " + fp.confirmationNumber.getText());
 		
+	}
+	
+	@Then("user should see unchecked radio button")
+	public void user_should_see_unchecked_radio_button() {
+		assertTrue(!efp.acceptTermRadioButton.isSelected());
+	}
+
+	@Then("user should see all fields are unfilled")
+	public void user_should_see_all_fields_are_unfilled() {
+		assertTrue(pip.pfirstname.getText().isEmpty());
+		assertTrue(pip.plastname.getText().isEmpty());
+		assertTrue(pip.pemail.getText().isEmpty());
+		assertTrue(pip.phomephone.getText().isEmpty());
+		assertTrue(pip.pstreet.getText().isEmpty());
+		assertTrue(pip.pcity.getText().isEmpty());
+		assertTrue(pip.pstate.getText().isEmpty());
+		assertTrue(pip.pzipcode.getText().isEmpty());
+		selectByIndex(pip.pHowDidYouHearUs, 1);
+		
+	}
+
+	@Then("user should see auto selected education year is {int}")
+	public void user_should_see_auto_selected_education_year_is(String int1) {
+		String acYear1 = sip.acYear.getText().replaceAll("[^ 0-9]", "").split(" ")[0];
+		assertEquals("wrong current year is selected automaticaly" ,int1,acYear1);
+	}
+
+	@When("user select unreasonable grade more than +{int}{int} years")
+	public void user_select_unreasonable_grade_more_than_years(Integer int1, Integer int2) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("user should not pass the current page")
+	public void user_should_not_pass_the_current_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("user should see unselected radio button for school")
+	public void user_should_see_unselected_radio_button_for_school() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("user should see warning alert")
+	public void user_should_see_warning_alert() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
 	}
 
 }
