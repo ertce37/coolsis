@@ -121,13 +121,13 @@ public class EnrollmentInquiryFormStepDefs {
 
 	@Then("User should see available schools")
 	public void user_should_see_available_schools() {
-		assertTrue(sp.firstSchoolName.isDisplayed());
+		assertTrue(sp.firstSchoolNameRadioButton.isDisplayed());
 
 	}
 
 	@When("User select one of the school from available schools list")
 	public void user_select_one_of_the_school_from_available_schools_list() {
-		sp.firstSchoolName.click();
+		sp.firstSchoolNameRadioButton.click();
 
 	}
 
@@ -177,40 +177,46 @@ public class EnrollmentInquiryFormStepDefs {
 		assertTrue(pip.phomephone.getText().isEmpty());
 		assertTrue(pip.pstreet.getText().isEmpty());
 		assertTrue(pip.pcity.getText().isEmpty());
-		assertTrue(pip.pstate.getText().isEmpty());
+	//	assertTrue(pip.pstate.getText().isEmpty());
 		assertTrue(pip.pzipcode.getText().isEmpty());
 		selectByIndex(pip.pHowDidYouHearUs, 1);
 		
 	}
 
 	@Then("user should see auto selected education year is {int}")
-	public void user_should_see_auto_selected_education_year_is(String int1) {
+	public void user_should_see_auto_selected_education_year_is(Integer int1) {
 		String acYear1 = sip.acYear.getText().replaceAll("[^ 0-9]", "").split(" ")[0];
-		assertEquals("wrong current year is selected automaticaly" ,int1,acYear1);
+		String expectedYear=String.valueOf(int1);
+		assertEquals("wrong current year is selected automaticaly" ,expectedYear,acYear1);
+		assertTrue("wrong current year is selected automaticaly", sip.acYear.isSelected());
 	}
 
 	@When("user select unreasonable grade more than +{int}{int} years")
 	public void user_select_unreasonable_grade_more_than_years(Integer int1, Integer int2) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+		int sCurrentAge =Integer.parseInt(ConfigurationReader.getProperty("currentYear"))
+				-Integer.parseInt(us.birthDay1.split("/")[2]);
+		if(sCurrentAge >= 10) {
+			selectByIndex(sip.sGrade, us.sGrade()+int2);
+		}else {
+			selectByIndex(sip.sGrade, us.sGrade()+int1);
+		}
 	}
 
 	@Then("user should not pass the current page")
 	public void user_should_not_pass_the_current_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+
+		assertTrue(!efp.pageVerify("Schools").isEnabled());
 	}
 
 	@Then("user should see unselected radio button for school")
 	public void user_should_see_unselected_radio_button_for_school() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	   assertTrue("Schools are selected", !(sp.firstSchoolNameRadioButton.isSelected() &&
+			   								sp.secondSchoolNameRadioButton.isSelected()));
 	}
 
 	@Then("user should see warning alert")
 	public void user_should_see_warning_alert() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	   assertTrue("Alert didn't see", sip.alertOk.isDisplayed());
 	}
 
 }

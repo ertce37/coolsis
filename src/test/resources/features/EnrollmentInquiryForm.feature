@@ -40,6 +40,8 @@ Scenario: check auto selected education year is 2018
 	Given User get EnrollmentInquiryForm page	
 	When User accept admission procesure
 	And User click the next button
+	When User fill all parent information form
+	And User click the next button
 	And User click the OK button on warning alert
 	Then user should see auto selected education year is 2018
 	@temp
@@ -48,9 +50,11 @@ Scenario: Application should not accept unreasonable grade +3 or -3
 	When User accept admission procesure
 	And User click the next button
 	And User fill all parent information form	
+	And User click the next button
 	And User click the OK button on warning alert
 	And User fill all student information form
 	And user select unreasonable grade more than +4-4 years
+	And User click the next button
 	Then user should not pass the current page
 	@temp
 Scenario: Complete registiration EnrollmentInquiryForm succesfully
