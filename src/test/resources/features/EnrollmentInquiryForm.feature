@@ -1,3 +1,4 @@
+@temp
 Feature: Registiration EnrollmentInquiryForm succesfully
 
 Scenario: Complete registiration EnrollmentInquiryForm succesfully
