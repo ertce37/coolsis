@@ -28,7 +28,8 @@ public class UserParent {
 	public String zipcode = addpart.split(" ")[1];
 	public String state = addpart.split(" ")[0];
 	//public String phone = rd.nextInt(923456253) + 4000000000L + "";
-	public String phone =faker.number().numberBetween(2000000000L, 9999999999L)+"";
+	public String phone =faker.number().numberBetween(200L, 999L)+""
+						+faker.number().numberBetween(2000000L, 9990000L);
 	public String email = ConfigurationReader.getProperty("parentEmail");
 	// System.out.println(addpart);
 	// System.out.println(firstName + zipcode + state);

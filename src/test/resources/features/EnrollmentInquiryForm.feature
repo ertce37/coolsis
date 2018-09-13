@@ -1,4 +1,4 @@
-Feature: EnrollmentInquiryForm
+Feature: Registiration EnrollmentInquiryForm succesfully
 
 Scenario: Complete registiration EnrollmentInquiryForm succesfully
 	Given User get EnrollmentInquiryForm page
