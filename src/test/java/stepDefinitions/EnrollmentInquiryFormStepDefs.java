@@ -37,7 +37,7 @@ public class EnrollmentInquiryFormStepDefs {
 	@Given("User get EnrollmentInquiryForm page")
 	public void user_get_EnrollmentInquiryForm_page() {
 		Driver.getDriver().get(ConfigurationReader.getProperty("URLEnrollmentInquiryForm"));
-		waitFor(5);
+		waitFor(3);
 	}
 
 	@When("User accept admission procesure")
@@ -82,7 +82,7 @@ public class EnrollmentInquiryFormStepDefs {
 		sip.sfirstname.sendKeys(us.sfirstName);
 		sip.slastname.sendKeys(us.slastName);
 		sip.sBirthDay.sendKeys(us.dateOfBirth() + Keys.ENTER);
-		waitFor(1);
+		waitFor(2);
 		selectByIndex(sip.sGender, 2);
 		sip.rBttnAcYear2018.click();
 		us.currentAcYear = sip.acYear.getText();
