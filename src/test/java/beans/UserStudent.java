@@ -21,6 +21,7 @@ public class UserStudent {
 	public static String sfirstName1 = faker.name().firstName();
 	public static String sMiddleName = faker.name().firstName();
 	public static String slastName = faker.name().lastName();
+	public static String slastName2 = faker.name().lastName();
 	public static Date dateOfBirth = faker.date().birthday(5, 16);
 //	public static String birthDay = dateOfBirth + "";
 	public static String currentAcYear;
