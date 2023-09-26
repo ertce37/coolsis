@@ -38,8 +38,6 @@ public class UserParent {
 	// long number = rd.nextInt(923456253) + 4000000000L ;
 	// String phone1 = number+ "";
 	// System.out.println(phone1);
-	//
-	//
 	// }
 
 }
