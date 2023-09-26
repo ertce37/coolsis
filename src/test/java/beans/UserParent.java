@@ -18,7 +18,7 @@ public class UserParent {
 
 	public String firstName = faker.name().firstName();
 	public String lastName = faker.name().lastName();
-
+	public String middleName = faker.name().lastName();
 	public String address = faker.address().fullAddress();
 	// System.out.println(address);
 	public String street = address.split(",")[0];
