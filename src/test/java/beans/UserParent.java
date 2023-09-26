@@ -23,6 +23,8 @@ public class UserParent {
 	// System.out.println(address);
 	public String street = address.split(",")[0];
 	public String city = address.split(",")[1];
+	public String city2 = address.split(",")[1];
+	public String city3 = address.split(",")[1];
 	public String password = ConfigurationReader.getProperty("parentEmailPass");
 	public String addpart = address.split(",")[2].trim();
 	public String zipcode = addpart.split(" ")[1];
