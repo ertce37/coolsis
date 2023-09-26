@@ -18,8 +18,10 @@ public class UserStudent {
 	static Date dateOfBirth1 = faker.date().birthday(6, 16);
 
 	public static String sfirstName = faker.name().firstName();
+	public static String sfirstName1 = faker.name().firstName();
 	public static String sMiddleName = faker.name().firstName();
 	public static String slastName = faker.name().lastName();
+	public static String slastName2 = faker.name().lastName();
 	public static Date dateOfBirth = faker.date().birthday(5, 16);
 	public static Date dateOfBirth13 = faker.date().birthday(5, 16);
 	public static Date dateOfBirth2 = faker.date().birthday(5, 16);
